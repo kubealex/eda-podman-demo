@@ -4,11 +4,11 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - 'eda-podman-demo/eda-utils/**'
+      - 'eda-utils/**'
   pull_request:
     branches: [ "main" ]
     paths:
-      - 'eda-podman-demo/eda-utils/**'
+      - 'eda-utils/**'
 
 jobs:
   build-images:
@@ -24,8 +24,8 @@ jobs:
         image: eda-alertmanager
         tags: latest
         containerfiles: |
-          ./eda-podman-demo/eda-utils/Containerfile-alertmanager
-        context: ./eda-podman-demo/eda-utils
+          ./eda-utils/Containerfile-alertmanager
+        context: ./eda-utils
 
     - name: Build Ansible stack image
       id: build-image-ansible
@@ -34,8 +34,8 @@ jobs:
         image: eda-ansible
         tags: latest
         containerfiles: |
-          ./eda-podman-demo/eda-utils/Containerfile-ansible
-        context: ./eda-podman-demo/eda-utils
+          ./eda-utils/Containerfile-ansible
+        context: ./eda-utils
 
     - name: Push To quay.io
       id: push-alertmanager
