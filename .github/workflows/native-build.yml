@@ -4,17 +4,17 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - 'eda-podman-demo/eda-quarkus-tester/**'
+      - 'eda-quarkus-tester/**'
   pull_request:
     branches: [ "main" ]
     paths:
-      - 'eda-podman-demo/eda-quarkus-tester/**'
+      - 'eda-quarkus-tester/**'
 
 jobs:
   build:
     name: Build Quarkus application and push image
     env:
-      working-directory: ./eda-podman-demo/eda-quarkus-tester
+      working-directory: ./eda-quarkus-tester
     defaults:
       run:
         working-directory: ${{ env.working-directory }}
