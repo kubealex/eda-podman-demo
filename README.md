@@ -1,3 +1,6 @@
+[![Build dependencies](https://github.com/kubealex/eda-podman-demo/actions/workflows/stack-build.yml/badge.svg)](https://github.com/kubealex/eda-podman-demo/actions/workflows/stack-build.yml)
+[![Quarkus native build](https://github.com/kubealex/eda-podman-demo/actions/workflows/native-build.yml/badge.svg)](https://github.com/kubealex/eda-podman-demo/actions/workflows/native-build.yml)
+
 # EDA Demo with Podman
 
 ## Requirements
