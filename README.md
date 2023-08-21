@@ -22,10 +22,19 @@ The stack is composed by four containers:
 - Quarkus-client container that will act as an event generator
 - Ansible EDA container image, running the ansible bits
 
-The *eda-ansible* directory, all rulebooks and playbooks are present.
-The *eda-quarkus-tester* directory contains the source code for the quarkus client
+The _eda-ansible_ directory, all rulebooks and playbooks are present.
+The _eda-quarkus-tester_ directory contains the source code for the quarkus client
 
 A pre-built **podman-compose.yml** is present in the repo to allow a quick setup of the kafka/alertmanager/quarkus stack.
+
+## Dynatrace demo
+
+The use cases contain a Dynatrace integration.
+To configure the integrations, ensure you use your API URL and API Token configured with the following permissions in the [dynatrace rulebook](./eda-ansible/eda-rulebook-dynatrace.yml):
+
+- Read/Write problems
+- Read/Write configuration
+- Access problem and event feed, metrics, and topology
 
 ## Usage
 
